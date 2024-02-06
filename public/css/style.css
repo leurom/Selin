@@ -1,3 +1,72 @@
-grid-images{
-    size: 50px;
+.title{
+    text-align: center;
+    color: white;
+}
+.grid-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* optional: Abstand zwischen den Bildern */
+}
+.grid-images img {
+    max-width: 65%;
+    height: auto;
+}
+body {
+    background-color: #0a0801;
+    overflow: hidden;
+}
+.confetti {
+    width: 10px;
+    height: 10px;
+    background-color: #e22;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: confetti-fall linear infinite both;
+    animation-play-state: running;
+}
+@keyframes confetti-fall {
+    0% { transform: translateY(-100vh) rotate(0deg); }
+    100% { transform: translateY(100vh) rotate(360deg); }
+}
+.balloon {
+    width: 50px;
+    height: 70px;
+    background-color: #ff7f50;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: balloon-rise linear infinite both;
+    animation-play-state: running;
+}
+@keyframes balloon-rise {
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-100vh); }
+}
+.firework {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: #f00;
+    border-radius: 50%;
+    animation: firework 2s infinite;
+    animation-play-state: running;
+}
+@keyframes firework {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100vh) scale(0.5);
+    }
+}
+.video-container {
+    display: flex;
+    justify-content: center; /* Horizontal zentrieren */
+    padding-bottom: 5px;
 }
