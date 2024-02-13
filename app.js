@@ -12,7 +12,9 @@ app.get('/', (req, res) => {
     //sendTextMessage();
     res.sendFile(path.join(__dirname, './public/html/index.html'));
 });
-
+app.get('/letsgo', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/html/letsgo.html'));
+});
 const port = process.env.PORT || 8000;
 app.listen(port, () => {console.log(`Listening on port ${port}...`)});
 
