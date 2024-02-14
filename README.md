@@ -7,3 +7,4 @@
 - Create new folder
 - Clone Github Repo
 - node app.js
+- Go to http://localhost:8000/
