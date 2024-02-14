@@ -15,6 +15,9 @@ app.get('/', (req, res) => {
 app.get('/letsgo', (req, res) => {
     res.sendFile(path.join(__dirname, './public/html/letsgo.html'));
 });
+app.get('/explora', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/html/explora.html'));
+});
 const port = process.env.PORT || 8000;
 app.listen(port, () => {console.log(`Listening on port ${port}...`)});
 
